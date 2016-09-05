@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="instaApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app/js/app.js"></script>
+    <script type="text/javascript" src="app/js/controllers/InstaController.js"></script>
+    <script type="text/javascript" src="app/js/factories/InstaFactory.js"></script>
+  </head>
+
+    <body>
+
+      <p> "Hello World!" </p>
+      <div ng-controller="InstaController as ctrl">
+        <p ng-repeat="insta in ctrl.instas">
+          name: {{ insta.text }} {{ insta.completed ? "Completed" : "unfinished"}}
+          <br>
+          <span ng-hide="insta.completed" ng-click="insta.complete();">Completed</span>
+        </p>
+
+        <input type="text" ng-model="instaText">
+        <button ng-click="ctrl.addInsta(instaText);">Add an Insta</button>
+        <br>
+        <button ng-click="ctrl.removeInsta();">Remove last Insta</button>
+
+      </div>
+    </body>
+
+</html>
