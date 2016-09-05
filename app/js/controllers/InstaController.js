@@ -2,10 +2,8 @@ instaApp.controller('InstaController', ['InstaFactory', function(InstaFactory){
 
   var self = this;
 
-  self.instas = [
-    {text: "insta1", completed: false},
-    {text: "insta2", completed: true}
-  ];
+  self.instas = [new InstaFactory('Insta1', true),
+  new InstaFactory('Insta2', false)];
 
   self.addInsta = function(text){
     self.instas.push(new InstaFactory(text));
