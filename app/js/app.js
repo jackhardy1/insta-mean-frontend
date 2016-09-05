@@ -1,1 +1,1 @@
-var instaApp = angular.module('instaApp', []);
+var instaApp = angular.module('instaApp',[]);

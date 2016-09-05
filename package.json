@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd app && ./node_modules/http-server/bin/http-server",
+    "webdriver-manager": "cd app && ./node_modules/protractor/bin/webdriver-manager",
+    "protractor": "cd app && ./node_modules/protractor/bin/protractor",
+    "karma": ""
   },
   "repository": {
     "type": "git",
