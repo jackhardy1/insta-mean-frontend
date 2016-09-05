@@ -13,17 +13,17 @@
     <body>
 
       <p> Hello World </p>
-      <div ng-controller="InstaController as ctrl">
+      <div id="instas" ng-controller="InstaController as ctrl">
         <p ng-repeat="insta in ctrl.instas">
           name: {{ insta.text }} {{ insta.completed ? "Completed" : "unfinished"}}
           <br>
-          <span ng-hide="insta.completed" ng-click="insta.complete();">Completed</span>
+          <span ng-hide="insta.completed" ng-click="insta.complete();"></span>
         </p>
 
-        <input type="text" ng-model="instaText">
-        <button class="btn btn-default" ng-click="ctrl.addInsta(instaText);">Add an Insta</button>
+        <input id="new-insta-text" type="text" ng-model="instaText">
+        <button id="add-insta" class="btn btn-default" ng-click="ctrl.addInsta(instaText);">Add an Insta</button>
         <br>
-        <button class="btn btn-default" ng-click="ctrl.removeInsta();">Remove last Insta</button>
+        <button id="remove-insta" class="btn btn-default" ng-click="ctrl.removeInsta();">Remove last Insta</button>
 
       </div>
     </body>
