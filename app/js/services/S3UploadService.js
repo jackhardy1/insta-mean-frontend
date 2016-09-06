@@ -1,7 +1,7 @@
 instaApp.service('S3UploadService', ['$q', function ($q) {
 
     AWS.config.region = 'us-west-2';
-    AWS.config.update({ accessKeyId: 'AKIAJA7KL4KV3BGEU3BQ', secretAccessKey: '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' });
+    AWS.config.update({ accessKeyId: '', secretAccessKey: '';
 
     var bucket = new AWS.S3({ params: { Bucket: 'insta-mean', maxRetries: 10 }, httpOptions: { timeout: 360000 } });
 
