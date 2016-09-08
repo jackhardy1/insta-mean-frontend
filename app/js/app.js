@@ -1,1 +1,1 @@
-var instaApp = angular.module('instaApp',['ngFileUpload']);
+var instaApp = angular.module('instaApp',['ngFileUpload','ui.bootstrap']);

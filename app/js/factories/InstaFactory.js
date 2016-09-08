@@ -1,7 +1,8 @@
 instaApp.factory('InstaFactory', function() {
 
-  var Insta = function(text){
+  var Insta = function(text,image){
     this.text = text;
+    this.image = image;
     this.completed = (typeof completed !== 'undefined') ? completed : false;
   };
 
